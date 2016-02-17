@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="7" inline="false" x="157" y="-220">
+  <block type="controls_whileUntil" id="7" inline="false" x="102" y="-433">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
       <block type="sensor_button" id="303">
@@ -42,6 +42,44 @@
             </next>
           </block>
         </statement>
+        <next>
+          <block type="controls_if" id="440" inline="false">
+            <value name="IF0">
+              <block type="logic_compare" id="441" inline="true">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <block type="sensor_object" id="442">
+                    <field name="OBJECT">RIGHTFRONT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="443">
+                    <field name="NUM">75</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="led_select" id="444" inline="true">
+                <field name="ACTION">FLASH</field>
+                <value name="LED">
+                  <block type="math_number" id="445">
+                    <field name="NUM">5</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="robot_delay" id="446" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="447">
+                        <field name="NUM">150</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
       </block>
     </statement>
   </block>
