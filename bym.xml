@@ -10,7 +10,7 @@
       <block type="controls_if" id="311" inline="false">
         <value name="IF0">
           <block type="logic_compare" id="318" inline="true">
-            <field name="OP">LT</field>
+            <field name="OP">GT</field>
             <value name="A">
               <block type="sensor_light" id="481">
                 <field name="LIGHT">LEFT</field>
@@ -46,7 +46,7 @@
           <block type="controls_if" id="440" inline="false">
             <value name="IF0">
               <block type="logic_compare" id="441" inline="true">
-                <field name="OP">LT</field>
+                <field name="OP">GT</field>
                 <value name="A">
                   <block type="sensor_light" id="482">
                     <field name="LIGHT">RIGHT</field>
@@ -82,7 +82,7 @@
               <block type="controls_if" id="448" inline="false">
                 <value name="IF0">
                   <block type="logic_compare" id="449" inline="true">
-                    <field name="OP">LT</field>
+                    <field name="OP">GT</field>
                     <value name="A">
                       <block type="sensor_light" id="483">
                         <field name="LIGHT">REAR</field>
